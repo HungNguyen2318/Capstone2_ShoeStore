@@ -29,7 +29,7 @@ function renderProduct (arrProduct) {
     <div class="item text-center" onclick=getDetail(${product.id})>
       <img src="${product.image}" alt="">
       <h3 class="text-center">${product.name}</h3>
-      <h4>${product.price}$</p>
+      <h4><del class="text-secondary">${product.price*1.2}$<i class="fa-solid fa-tag"></i></del> <span class="fw-bold text-danger">${product.price}$ <i class="fa-solid fa-tag"></i></span></p>
       <button id="btn_buyNow"><i class="fa-solid fa-cart-plus"></i>Buy Now</button>
     </div>
     `;
@@ -37,6 +37,6 @@ function renderProduct (arrProduct) {
   document.getElementById('divProductContent').innerHTML = content;
 };
 window.getDetail = (id) => {
-  console.log(id)
-  getDetailProduct(id);
+  // console.log(id)
+  window.location.href = `./../views/detail.html?productId=${id}`;
 }
