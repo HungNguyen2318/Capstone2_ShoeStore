@@ -38,5 +38,5 @@ function renderProduct (arrProduct) {
 };
 window.getDetail = (id) => {
   // console.log(id)
-  window.location.href = `./../views/detail.html?productId=${id}`;
+  window.location.href = `./app/views/detail.html?productId=${id}`;
 }
